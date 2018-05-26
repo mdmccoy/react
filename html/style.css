@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+}
+
+#temperature{
+    border: 1px solid;
+    margin: 0 auto;
+    width: 5em;
+    padding: 2em;
+    margin-top: 2em;
+}
+
+/* #temerpature span {
+    font-size: 30pt;
+} */
