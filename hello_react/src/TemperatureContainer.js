@@ -4,12 +4,12 @@ import Temperature from './Temperature'
 class TemperatureContainer extends React.Component{
     constructor(){
         super();
-        this.state = {value:80}
+        this.state = {temperature: {value:80, unit: 'F'}}
     }
 
     render(){
         return(
-            <Temperature value={this.state.value} />
+            <Temperature temperature={this.state.temperature} />
         )
     }
 }

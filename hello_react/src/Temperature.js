@@ -3,19 +3,23 @@ import './Temperature.css'
 
 
 
-class Temperature extends React.Component{
-    // constructor(){
-    //     super()
-    //     this.state = {value:80}
-    // }
+// class Temperature extends React.Component{
+//     render(){
+//         return(
+//             <span className="temperature">
+//             {this.props.value}
+//             </span>
+//         )
+//     }
+// }
 
-    render(){
-        return(
-            <span className="temperature">
-            {this.props.value}
-            </span>
-        )
-    }
+var Temperature = (props) => {
+    return (
+        <span className="temperature">
+        {props.temperature.value}{props.temperature.unit}
+        </span>
+    )
 }
 
 export default Temperature;
+
