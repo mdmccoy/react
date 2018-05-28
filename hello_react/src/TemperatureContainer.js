@@ -4,12 +4,26 @@ import Temperature from './Temperature'
 class TemperatureContainer extends React.Component{
     constructor(){
         super();
-        this.state = {temperature: {value:80, unit: 'F'}}
+        this.state = {value:0}
     }
 
+    componentDidMount() {
+        fetch('/weather')
+        .then(
+            (response) => response.json()
+        ).then(
+            (jsonResponse) => {
+                this.setState({
+                    value:jsonResponse["main"]["temp"],
+                    unit:'F'
+                })
+            }
+        )
+    }
+    
     render(){
         return(
-            <Temperature temperature={this.state.temperature} />
+            <Temperature temperature={this.state} />
         )
     }
 }
